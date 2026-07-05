@@ -1,6 +1,4 @@
 
-# Let's create a beautifully formatted, well-organized version of this documentation
-# I'll convert the Hebrew text to a professional, structured markdown format
 
 content = """# BOT-BOOK-POPY
 ## מסגרת עבודה מתקדמת לניהול אוטומציה של חשבונות פייסבוק
