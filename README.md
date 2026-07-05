@@ -329,11 +329,7 @@ BOT-BOOK-POPY היא מערכת מתקדמת המשלבת:
 - ✅ אמולציה התנהגות אנושית
 
 > **הערה חשובה**: זכור תמיד כי השימוש בכלי זה נגד תנאי השירות של פלטפורמות כמו פייסבוק עלול לגרום לחסימת חשבונות ופעולות משפטיות. השתמש בו אך ורק למטרות חוקיות, חינוכיות ומחקריות.
-"""
 
-# Save the formatted content
-with open('/mnt/agents/output/BOT-BOOK-POPY_Documentation.md', 'w', encoding='utf-8') as f:
-    f.write(content)
 
 print("✅ הקובץ נשמר בהצלחה!")
 print(f"📄 אורך התיעוד: {len(content):,} תווים")
