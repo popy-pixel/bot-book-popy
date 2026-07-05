@@ -1,30 +1,90 @@
-📖 1. מהו הפרויקט ולמי הוא שימושי
-BOT-BOOK-POPY הוא מסגרת עבודה (Framework) מתקדמת לניהול אוטומציה של חשבונות פייסבוק. המערכת מספקת ניהול מרובה חשבונות בבידוד מוחלט, אמולציה של דפדפן אנושי אמיתי, ביצוע פעולות אוטומטיות (פרסום, תגובות, לייקים), וממשק ווב מלא לניהול והפקחה.
-למי הוא שימושי:
-מפתחי אוטומציה — למידה של טכניקות אנטי-גילוי מתקדמות
-חוקרי אבטחה — מחקר של מערכות זיהוי בוטים
-מנהלי רשתות חברתיות — ניהול מספר חשבונות בצורה מאורגנת
-סטודנטים — לימוד ארכיטקטורת תוכנה מתקדמת
-מהנדסי DevOps — דוגמה למערכת מבוזרת עם תורים ו-Workers
-⚠️ אזהרה: הפרויקט נועד למטרות חינוכיות ומחקריות בלבד. השימוש בו נגד תנאי השירות של פייסבוק הוא על אחריות המשתמש בלבד.
-🧠 2. אופי הקוד והידעוד שלו
-אופי הקוד:
-שפה: Python 3.12 (Backend) + React (Frontend)
-סגנון: אסינכרוני (Async/Await) ברובו
-ארכיטקטורה: Microservices-lite עם הפרדת שכבות
-בידוד: כל חשבון רץ בדפדפן נפרד לחלוטין
-התחמקות: 16 טכניקות שונות נגד זיהוי בוטים
-טכנולוגיות ליבה:
-FastAPI — מסגרת ווב מהירה עם תמיכה ב-async
-Playwright — אוטומציה של דפדפן (מחליף את Selenium)
-Celery + Redis — תור משימות מבוזר
-SQLAlchemy Async — ORM אסינכרוני למסד נתונים
-Pydantic — וולידציה של נתונים
-16 טכניקות אנטי-גילוי:
-Spoofing של Navigator, WebGL Spoofing, Canvas Noise, WebRTC Block, Chrome Runtime APIs, Permission API, Battery API, Font Fingerprinting, Screen Properties, iframe Patch, Performance Cleanup, toString Patching, User-Agent Rotation, Viewport Randomization, Timezone Spoofing, Hardware Concurrency
-🏗️ 3. איך עובד הקוד — הסבר ארכיטקטורה
-תרשים זרימת נתונים:
-plain
+
+# Let's create a beautifully formatted, well-organized version of this documentation
+# I'll convert the Hebrew text to a professional, structured markdown format
+
+content = """# BOT-BOOK-POPY
+## מסגרת עבודה מתקדמת לניהול אוטומציה של חשבונות פייסבוק
+
+---
+
+## 📖 1. סקירה כללית
+
+### מהו הפרויקט?
+
+**BOT-BOOK-POPY** היא מסגרת עבודה (Framework) מתקדמת לניהול אוטומציה של חשבונות פייסבוק. המערכת מספקת:
+
+| תכונה | תיאור |
+|-------|--------|
+| **ניהול מרובה חשבונות** | בידוד מוחלט בין כל חשבון |
+| **אמולציה אנושית** | חיקוי של דפדפן אנושי אמיתי |
+| **פעולות אוטומטיות** | פרסום, תגובות, לייקים |
+| **ממשק ווב מלא** | ניהול והפקחה דרך דפדפן |
+
+### למי הוא שימושי?
+
+| קהל יעד | מטרה |
+|---------|------|
+| 👨‍💻 **מפתחי אוטומציה** | למידה של טכניקות אנטי-גילוי מתקדמות |
+| 🔒 **חוקרי אבטחה** | מחקר של מערכות זיהוי בוטים |
+| 📊 **מנהלי רשתות חברתיות** | ניהול מספר חשבונות בצורה מאורגנת |
+| 🎓 **סטודנטים** | לימוד ארכיטקטורת תוכנה מתקדמת |
+| ⚙️ **מהנדסי DevOps** | דוגמה למערכת מבוזרת עם תורים ו-Workers |
+
+> ⚠️ **אזהרה משפטית**: הפרויקט נועד **למטרות חינוכיות ומחקריות בלבד**. השימוש בו נגד תנאי השירות של פייסבוק הוא על אחריות המשתמש בלבד.
+
+---
+
+## 🧠 2. אופי הקוד והטכנולוגיות
+
+### מפרט טכני
+
+| פרמטר | פרט |
+|-------|-----|
+| **שפת Backend** | Python 3.12 |
+| **שפת Frontend** | React |
+| **סגנון תכנות** | אסינכרוני (Async/Await) |
+| **ארכיטקטורה** | Microservices-lite עם הפרדת שכבות |
+| **בידוד חשבונות** | כל חשבון רץ בדפדפן נפרד לחלוטין |
+| **טכניקות אנטי-גילוי** | 16 טכניקות שונות |
+
+### טכנולוגיות ליבה
+
+| טכנולוגיה | תפקיד |
+|-----------|-------|
+| **FastAPI** | מסגרת ווב מהירה עם תמיכה ב-async |
+| **Playwright** | אוטומציה של דפדפן (מחליף את Selenium) |
+| **Celery + Redis** | תור משימות מבוזר |
+| **SQLAlchemy Async** | ORM אסינכרוני למסד נתונים |
+| **Pydantic** | וולידציה של נתונים |
+
+### 16 טכניקות אנטי-גילוי
+
+| # | טכניקה | תיאור |
+|---|--------|-------|
+| 1 | **Navigator Spoofing** | שינוי אובייקט Navigator |
+| 2 | **WebGL Spoofing** | שינוי חתימת WebGL |
+| 3 | **Canvas Noise** | הוספת רעש ל-Canvas Fingerprinting |
+| 4 | **WebRTC Block** | חסימת דליפת IP דרך WebRTC |
+| 5 | **Chrome Runtime APIs** | אמולציה של APIs של Chrome |
+| 6 | **Permission API** | ניהול הרשאות דפדפן |
+| 7 | **Battery API** | אמולציה של Battery Status API |
+| 8 | **Font Fingerprinting** | ניהול רשימת גופנים |
+| 9 | **Screen Properties** | שינוי מאפייני מסך |
+| 10 | **iframe Patch** | תיקון חשיפה ב-iframes |
+| 11 | **Performance Cleanup** | ניקוי נתוני ביצועים |
+| 12 | **toString Patching** | תיקון toString של פונקציות |
+| 13 | **User-Agent Rotation** | סיבוב User-Agent |
+| 14 | **Viewport Randomization** | רנדומיזציה של גודל חלון |
+| 15 | **Timezone Spoofing** | שינוי אזור זמן |
+| 16 | **Hardware Concurrency** | אמולציה של מספר ליבות מעבד |
+
+---
+
+## 🏗️ 3. ארכיטקטורת המערכת
+
+### תרשים זרימת נתונים
+
+```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │   משתמש (UI)    │────▶│  React Frontend  │────▶│  FastAPI API    │
 │                 │     │  (localhost:3000)│     │  (localhost:8000)│
@@ -54,18 +114,32 @@ plain
     │  + UA Chrome │  │  + UA Firefox│
     │  + Fingerprint│  │  + Fingerprint│
     └──────────────┘  └──────────────┘
-תהליך ביצוע משימה:
-משתמש יוצר משימה דרך ה-UI
-ה-Frontend שולח בקשה ל-API
-FastAPI שומר את המשימה ב-DB (סטטוס: PENDING)
-Celery Worker מושך את המשימה מהתור (סטטוס: RUNNING)
-Browser Manager יוצר/משתמש בסשן מבודד
-Stealth Engine מחיל חתימת דפדפן ייחודית
-Humanoid Engine מבצע פעולות כמו בן אדם
-Facebook Actions מבצע את הפעולה המבוקשת
-תוצאה נשמרת ב-DB + WebSocket מעדכן את ה-UI
-🗂️ 4. דיאגרמת קבצים ומבנה הפרויקט
-plain
+```
+
+### תהליך ביצוע משימה (צעד אחר צעד)
+
+| שלב | פעולה | רכיב |
+|-----|-------|------|
+| 1 | המשתמש יוצר משימה דרך ה-UI | React Frontend |
+| 2 | ה-Frontend שולח בקשה ל-API | FastAPI |
+| 3 | FastAPI שומר את המשימה ב-DB | PostgreSQL/SQLite |
+| 4 | סטטוס: **PENDING** | - |
+| 5 | Celery Worker מושך את המשימה מהתור | Celery + Redis |
+| 6 | סטטוס: **RUNNING** | - |
+| 7 | Browser Manager יוצר/משתמש בסשן מבודד | Playwright |
+| 8 | Stealth Engine מחיל חתימת דפדפן ייחודית | Stealth Engine |
+| 9 | Humanoid Engine מבצע פעולות כמו בן אדם | Humanoid Engine |
+| 10 | Facebook Actions מבצע את הפעולה המבוקשת | Facebook Actions |
+| 11 | התוצאה נשמרת ב-DB | PostgreSQL/SQLite |
+| 12 | WebSocket מעדכן את ה-UI בזמן אמת | WebSocket |
+
+---
+
+## 🗂️ 4. מבנה הפרויקט
+
+### עץ קבצים מלא
+
+```
 bot-book-popy/
 │
 ├── 📁 app/                          ← קוד הליבה של האפליקציה
@@ -77,7 +151,7 @@ bot-book-popy/
 │   │   ├── 📄 accounts.py           ← CRUD חשבונות + בדיקת התחברות
 │   │   ├── 📄 tasks.py              ← CRUD משימות + ביטול
 │   │   ├── 📄 dashboard.py          ← סטטיסטיקות ונתונים
-│   │   ├── 📄 logs.py               ← לוגי פעילות
+│   │   ├── 📄 logs.py               ← לוגי פעולות
 │   │   ├── 📄 settings.py           ← הגדרות גלובליות
 │   │   └── 📄 websocket.py          ← עדכונים בזמן אמת
 │   │
@@ -146,35 +220,51 @@ bot-book-popy/
 ├── 📄 Dockerfile                    ← בניית Docker
 ├── 📄 docker-compose.yml            ← הרכבה מלאה ב-Docker
 └── 📄 README.md                     ← תיעוד
-🚀 5. הוראות התקנה מלאות
-אפשרות א: WSL (Ubuntu) — מומלץ!
-שלב 1 — פתיחת WSL:
-bash
+```
+
+---
+
+## 🚀 5. הוראות התקנה
+
+### אפשרות א: WSL (Ubuntu) — מומלץ!
+
+#### שלב 1 — פתיחת WSL
+```bash
 wsl
 # או
 wsl -d Ubuntu
-שלב 2 — התקנת תלויות:
-bash
+```
+
+#### שלב 2 — התקנת תלויות
+```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y python3 python3-pip python3-venv redis-server git curl
-שלב 3 — העתקת קבצים:
-bash
+```
+
+#### שלב 3 — העתקת קבצים
+```bash
 mkdir -p ~/projects
 cp -r /mnt/c/Users/USERNAME/bot-book-popy ~/projects/
 cd ~/projects/bot-book-popy
-שלב 4 — הגדרת סביבה:
-bash
+```
+
+#### שלב 4 — הגדרת סביבה
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 playwright install chromium
 mkdir -p data/profiles data/screenshots data/logs
 cp .env.example .env
-שלב 5 — עריכת .env:
-bash
+```
+
+#### שלב 5 — עריכת קובץ `.env`
+```bash
 nano .env
-תוכן מינימלי:
-env
+```
+
+**תוכן מינימלי:**
+```env
 HOST=0.0.0.0
 PORT=8000
 DEBUG=True
@@ -183,28 +273,69 @@ DATABASE_URL=sqlite:///data/botbook.db
 REDIS_URL=redis://localhost:6379/0
 CELERY_BROKER_URL=redis://localhost:6379/0
 CELERY_RESULT_BACKEND=redis://localhost:6379/0
-אפשרות ב: Docker Compose (הכי פשוט!)
-bash
+```
+
+---
+
+### אפשרות ב: Docker Compose (הכי פשוט!)
+
+```bash
 cd ~/projects/bot-book-popy
 docker-compose up -d
-🖥️ 6. איך לפתוח ולהריץ את הקבצים
-פתח 4 טרמינלים במקביל:
-Table
-טרמינל	פקודה	תפקיד
-#1	sudo service redis-server start	Redis Server
-#2	uvicorn app.main:app --reload --host 0.0.0.0 --port 8000	FastAPI Backend
-#3	celery -A app.workers.celery_app worker --loglevel=info --concurrency=4	Celery Worker
-#4	cd frontend && npm install && npm run dev	React Frontend
-גישה מדפדפן Windows:
-ממשק המשתמש: http://localhost:3000
-API Docs: http://localhost:8000/docs
-Health Check: http://localhost:8000/health
-📋 פקודות שימושיות
-Table
-פעולה	פקודה
-הפעלת סביבה וירטואלית	source venv/bin/activate
-יציאה מהסביבה	deactivate
-בדיקת Redis	redis-cli ping
-מחיקת מסד נתונים	rm data/botbook.db
-רשימת תהליכים	ps aux | grep python
-הריגת תהליך	kill -9 PID
+```
+
+---
+
+## 🖥️ 6. הפעלת המערכת
+
+### פתיחת 4 טרמינלים במקביל
+
+| טרמינל | פקודה | תפקיד |
+|--------|-------|-------|
+| **#1** | `sudo service redis-server start` | Redis Server |
+| **#2** | `uvicorn app.main:app --reload --host 0.0.0.0 --port 8000` | FastAPI Backend |
+| **#3** | `celery -A app.workers.celery_app worker --loglevel=info --concurrency=4` | Celery Worker |
+| **#4** | `cd frontend && npm install && npm run dev` | React Frontend |
+
+### גישה מדפדפן Windows
+
+| שירות | כתובת |
+|-------|-------|
+| 🖥️ ממשק המשתמש | [http://localhost:3000](http://localhost:3000) |
+| 📚 API Docs (Swagger) | [http://localhost:8000/docs](http://localhost:8000/docs) |
+| ✅ בדיקת בריאות | [http://localhost:8000/health](http://localhost:8000/health) |
+
+---
+
+## 📋 פקודות שימושיות
+
+| פעולה | פקודה |
+|-------|-------|
+| הפעלת סביבה וירטואלית | `source venv/bin/activate` |
+| יציאה מהסביבה | `deactivate` |
+| בדיקת Redis | `redis-cli ping` |
+| מחיקת מסד נתונים | `rm data/botbook.db` |
+| רשימת תהליכים | `ps aux | grep python` |
+| הריגת תהליך | `kill -9 PID` |
+
+---
+
+## 🎯 סיכום
+
+BOT-BOOK-POPY היא מערכת מתקדמת המשלבת:
+- ✅ ארכיטקטורת Microservices-lite
+- ✅ 16 טכניקות אנטי-גילוי
+- ✅ בידוד מוחלט בין חשבונות
+- ✅ ממשק ווב מודרני (React + FastAPI)
+- ✅ תור משימות מבוזר (Celery + Redis)
+- ✅ אמולציה התנהגות אנושית
+
+> **הערה חשובה**: זכור תמיד כי השימוש בכלי זה נגד תנאי השירות של פלטפורמות כמו פייסבוק עלול לגרום לחסימת חשבונות ופעולות משפטיות. השתמש בו אך ורק למטרות חוקיות, חינוכיות ומחקריות.
+"""
+
+# Save the formatted content
+with open('/mnt/agents/output/BOT-BOOK-POPY_Documentation.md', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+print("✅ הקובץ נשמר בהצלחה!")
+print(f"📄 אורך התיעוד: {len(content):,} תווים")
